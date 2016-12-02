@@ -1,0 +1,17 @@
+<ion-content >
+	<h1>Menu</h1>
+	{{msgTeste}}
+</ion-content>
+
+<ion-list>
+	<div ng-repeat="obj in categorias">
+		<ion-item class="item-stable"ng-class="{active: isGroupShown(obj)}"
+			ng-click="toggleGroup(obj)">
+			  <i class="icon" ng-class="isGroupShown(obj) ? 'ion-minus' : 'ion-plus'"></i>			            
+			  {{obj.descricao}}
+		</ion-item>
+		<ion-item class="item-accordion"ng-click="pesquisarSubAnuncio(obj.id)" ng-repeat="subcategoria in subcategorias" ng-show="isGroupShown(obj)">
+		  {{subcategoria.descricao}}
+		</ion-item>
+  	</div>
+</ion-list>
