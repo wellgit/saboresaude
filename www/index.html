@@ -40,10 +40,19 @@
 
     <ion-pane>
       <div class="bar bar-header">
-        <button class="button button-icon icon ion-navicon" ng-click="exibirListaMenu()"></button>
+        <a href="#/saboresaude/menu">       
+        <button class="button button-icon icon ion-navicon"></button>
+        </a>
         <div class="h1 title">Sabor e Saúde</div>
-        <button class="button icon ion-gear-a"></button>
+        <button class="button icon ion-gear-a"></button>        
       </div>
+
+      <ion-nav-bar class="bar-positive" ng-show='false'>
+        <ion-nav-back-button class="button-clear">
+          <i class="ion-arrow-left-c"></i> Back
+        </ion-nav-back-button>
+      </ion-nav-bar>
+
       <ion-nav-view class="has-header">
       </ion-nav-view>
     </ion-pane>
