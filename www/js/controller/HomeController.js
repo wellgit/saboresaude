@@ -4,13 +4,11 @@ homeController.$inject = ['$rootScope','$state'];
 
 function homeController($rootScope, $state){
     var vm = this;
-    $rootScope.msgTeste = 'Hello World';
+    vm.msgTeste = 'Hello World';
     vm.isExibirMenu = false;
-
+    vm.exibirListaMenu = exibirListaMenu;
 
 	function exibirListaMenu(){
-		vm.isExibirMenu = true;
-		console.log('Clicado');
-		
+		$state.go('menu');
 	}
 }
